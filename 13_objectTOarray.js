@@ -1,19 +1,14 @@
-// object singletone
-
-const chxuser = new Object();
-
 const regularuser = {
-  
-    email: "rafi@yahoo.com",
-  
-    personal_deatails: {
+  email: "rafi@yahoo.com",
+
+  personal_deatails: {
     username: "rafiul01",
-    
+
     fullname: {
       firstname: "Sayed Amin",
       lastname: "Rafiul",
     },
-    
+
     academic: {
       institution: "East West University",
       faculty: "Bachalor of Scirnce",
@@ -21,11 +16,10 @@ const regularuser = {
       semester: 12,
     },
     fathername: "Ali akbar",
-    mothernmae: "Jahanara Khatun",
+    mothername: "Jahanara Khatun",
   },
 };
 
-Object.freeze(regularuser);
-Object.assign(chxuser, regularuser);
-console.log (chxuser)
-console.log(chxuser.personal_deatails.academic.institution);
+console.log(Object.keys(regularuser)) // returning object in array format
+console.log(Object.values(regularuser));
+console.log(Object.entries(regularuser));// key and values are separately
